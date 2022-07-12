@@ -16,7 +16,7 @@ body {
     border: none;
     resize: none;
     color: var(--textColor);
-    border-left: 1px solid black;
+    border-left: 1px solid var(--borderColor);
     padding: 10px;
   }
   
@@ -73,6 +73,6 @@ body {
   }
   
   .saveBtn i:hover {
+    color: darkgreen;
     font-size: 20px;
-    transition: all .3s ease-in-out;
   }
