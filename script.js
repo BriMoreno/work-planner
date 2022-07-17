@@ -1,21 +1,57 @@
-var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY"));
+//Gets the current date to display in the jumbotron
+var todayDate = moment().format('dddd, MMM Do YYYY');
+$("#currentDay").html(todayDate);
 
-var time = moment()
-$("#currentTime").text(time.format('LTS'));
+$(document).ready(function () {
+  //listener for saveBtn
+  $(".saveBtn").on("click", function () {
+      // collects value from adjacent text field and hour the field is for
+      var text = $(this).siblings(".description").val();
+      var time = $(this).parent().attr("id");
 
-var hourDisplay = [
-    "6AM",
-    "7AM",
-    "8AM",
-    "9AM",
-    "10AM",
-    "11AM",
-    "12PM",
-    "1PM",
-    "2PM",
-    "3PM",
-    "4PM",
-    "5PM",
-    "6PM"
-  ];
+      // stores the text to local storage
+      localStorage.setItem(time, text);
+  })
+ 
+  function timeTracker() {
+      //get current number of hours
+      var timeNow = moment().hour();
+
+      // loops over each time block
+      $(".time-block").each(function () {
+          var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+          // checks whether each block is in the hour or the past and applies the appropriate background indicator
+          if (blockTime < timeNow) {
+              $(this).removeClass("future");
+              $(this).removeClass("present");
+              $(this).addClass("past");
+          }
+          else if (blockTime === timeNow) {
+              $(this).removeClass("past");
+              $(this).removeClass("future");
+              $(this).addClass("present");
+          }
+          else {
+              $(this).removeClass("present");
+              $(this).removeClass("past");
+              $(this).addClass("future");
+
+          }
+      })
+  }
+
+      // retrieves any previously stored data if it exists
+      $("#6AM .description").val(localStorage.getItem("6AM"));
+      $("#7AM .description").val(localStorage.getItem("7AM"));
+      $("#8AM .description").val(localStorage.getItem("8AM"));
+      $("#9AM .description").val(localStorage.getItem("9AM"));
+      $("#10AM .description").val(localStorage.getItem("10AM"));
+      $("#11AM .description").val(localStorage.getItem("11AM"));
+      $("#12PM .description").val(localStorage.getItem("12PM"));
+      $("#1PM .description").val(localStorage.getItem("1PM"));
+      $("#2PM .description").val(localStorage.getItem("2PM"));
+      $("#3PM .description").val(localStorage.getItem("3PM"));
+  
+      timeTracker();
+  })
