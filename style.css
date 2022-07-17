@@ -77,7 +77,7 @@ body {
     color: white;
     transition-duration: 0.4s
   }
-  #saveBtn i:hover {
+  #saveBtn :hover {
     background-color: grey;
   }
   
