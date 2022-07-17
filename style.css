@@ -68,12 +68,21 @@ body {
     color: white;
   }
   
- /*
-  .saveBtn{
+ 
+  #saveBtn{
+    display:inline-block;
     font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    background-color: var(--textColor);
+    color: white;
+    transition-duration: 0.4s
   }
-  .saveBtn i:hover {
-    color: darkgreen;
-    font-size: 20px;
+  #saveBtn i:hover {
+    background-color: grey;
   }
-  */
+  
+.button:active {
+  background-color:grey;
+  box-shadow: 0 10px #666;
+  transform: translateY(4px);
+}
