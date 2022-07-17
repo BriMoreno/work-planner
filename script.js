@@ -1,6 +1,9 @@
-//Gets the current date to display in the jumbotron
+//Gets the current date and time to display in the jumbotron
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
+
+var time = moment().format("LTS");
+$("#currentTime").html(time);
 
 $(document).ready(function () {
   //listener for saveBtn
@@ -42,16 +45,16 @@ $(document).ready(function () {
   }
 
       // retrieves any previously stored data if it exists
-      $("#6AM .description").val(localStorage.getItem("6AM"));
-      $("#7AM .description").val(localStorage.getItem("7AM"));
-      $("#8AM .description").val(localStorage.getItem("8AM"));
-      $("#9AM .description").val(localStorage.getItem("9AM"));
-      $("#10AM .description").val(localStorage.getItem("10AM"));
-      $("#11AM .description").val(localStorage.getItem("11AM"));
-      $("#12PM .description").val(localStorage.getItem("12PM"));
-      $("#1PM .description").val(localStorage.getItem("1PM"));
-      $("#2PM .description").val(localStorage.getItem("2PM"));
-      $("#3PM .description").val(localStorage.getItem("3PM"));
+      $("#6AM").val(localStorage.getItem("6AM"));
+      $("#7AM").val(localStorage.getItem("7AM"));
+      $("#8AM").val(localStorage.getItem("8AM"));
+      $("#9AM").val(localStorage.getItem("9AM"));
+      $("#10AM").val(localStorage.getItem("10AM"));
+      $("#11AM").val(localStorage.getItem("11AM"));
+      $("#12PM").val(localStorage.getItem("12PM"));
+      $("#1PM").val(localStorage.getItem("1PM"));
+      $("#2PM").val(localStorage.getItem("2PM"));
+      $("#3PM").val(localStorage.getItem("3PM"));
   
       timeTracker();
   })
