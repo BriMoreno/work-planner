@@ -4,14 +4,16 @@
   --borderColor: #D5B9B2;
   --pastColor: #A26769;
   --presentColor: #CEBEBE;
+  --textFont:'Edu TAS Beginner', cursive;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--textFont);
     font-size: 16px;
     line-height: 1;
   }
   
   textarea {
+    font-family: var(--textFont);
     background: white;
     border: none;
     resize: none;
@@ -21,6 +23,7 @@ body {
   }
   
   .jumbotron {
+    font-family: var(--textFont);
     text-align: center;
     background-color: var(--bgColor);;
     color: var(--textColor);
@@ -29,12 +32,11 @@ body {
   }
   
   .instruction{
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--textFont);
     color: var(--textColor);
     font-size: large;
     text-align: center;
   }
-  
   
   .time-block{
     text-align: center;
