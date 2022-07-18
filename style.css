@@ -11,8 +11,8 @@ body {
     line-height: 1;
   }
   
-  textarea{
-    background: var(--bgColor);
+  textarea {
+    background: white;
     border: none;
     resize: none;
     color: var(--textColor);
@@ -28,7 +28,7 @@ body {
     border-bottom: 10px solid var(--borderColor);
   }
   
-  .description{
+  .instruction{
     font-family: 'Open Sans', sans-serif;
     color: var(--textColor);
     font-size: large;
