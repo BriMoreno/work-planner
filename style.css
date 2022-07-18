@@ -13,7 +13,7 @@ body {
   }
   
   textarea {
-    font-family: var(--textFont);
+    font-family: Arial, Helvetica, sans-serif;
     background: white;
     border: none;
     resize: none;
@@ -56,35 +56,34 @@ body {
   }
   
   .past {
-    background-color: var(--bgColor);
+    background-color: var(--pastColor);
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: var(--presentColor);
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: lightgreen;
     color: white;
   }
   
- 
-  #saveBtn{
-    display:inline-block;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 10px;
-    background-color: var(--textColor);
-    color: white;
-    transition-duration: 0.4s
-  }
-  #saveBtn :hover {
-    background-color: grey;
-  }
+#saveBtn{
+  display:inline-block;
+  border-radius: 10px;
+  background-color: var(--textColor);
+  transition-duration: 0.4s
+}
+
+#saveBtn :hover {
+  font-size: medium;
+  color:white;
+}
   
-.button:active {
-  background-color:grey;
+#saveBtn :active {
+  background-color: bisque;
   box-shadow: 0 10px #666;
   transform: translateY(4px);
 }
