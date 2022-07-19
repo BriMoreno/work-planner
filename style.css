@@ -56,18 +56,16 @@ body {
   }
   
   .past {
-    background-color: var(--pastColor);
-    color: white;
+    background: var(--pastColor);
   }
   
   .present {
-    background-color: var(--presentColor);
-    color: white;
-  }
+   background: var(--presentColor);
   
+  }
   .future {
-    background-color: lightgreen;
-    color: white;
+    background: lightgreen;
+   
   }
   
 #saveBtn{

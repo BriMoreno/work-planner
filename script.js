@@ -21,27 +21,39 @@ function keepTime() {
     //search for what hour it is presently as well as past and future
 
     $(".hour-slot").each(function(){
-        var slot = parseInt($(this).attr("id").split(hour)[1]);
+        var slot = parseInt($(this).attr("id").split("hour")[1]);
 
             //styling for the past slots
             if(slot < now) {
-                $(this).addClass("past");
-                $(this).removeClass("present");
-                $(this).removeClass("future");
+                $("user-input").addClass("past");
+                $("user-input").removeClass("present");
+                $("user-input").removeClass("future");
             }
             //styling for the future slots
             else if (slot > now) {
-                $(this).removeClass("past");
-                $(this).removeClass("present");
-                $(this).addClass("future");
+                $("user-input").removeClass("past");
+                $("user-input").removeClass("present");
+                $("user-input").addClass("future");
             }
             //styling for present slots
             else {
-                $(this).removeClass("past");
-                $(this).addClass("present");
-                $(this).removeClass("future");
+                $("user-input").removeClass("past");
+                $("user-input").addClass("present");
+                $("user-input").removeClass("future");
             }
     })
 }
 
-//fetchs stored data if any
+//fetchs stored data if any and calls loop above
+    $("#6AM").val(localStorage.getItem("6AM"));
+    $("#7AM").val(localStorage.getItem("7AM"));
+    $("#8AM").val(localStorage.getItem("8AM"));
+    $("#9AM").val(localStorage.getItem("9AM"));
+    $("#10AM").val(localStorage.getItem("10AM"));
+    $("#11AM").val(localStorage.getItem("11AM"));
+    $("#12PM").val(localStorage.getItem("12PM"));
+    $("#1PM").val(localStorage.getItem("1PM"));
+    $("#2PM").val(localStorage.getItem("2PM"));
+    $("#3PM").val(localStorage.getItem("3PM"));
+
+    keepTime();
