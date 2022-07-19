@@ -81,7 +81,7 @@ body {
 }
   
 #saveBtn :active {
-  background-color: bisque;
+  background-color: white;
   box-shadow: 0 10px #666;
-  transform: translateY(4px);
+  transform: translateY(5px);
 }
