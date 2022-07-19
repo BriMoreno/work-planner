@@ -25,21 +25,21 @@ function keepTime() {
 
             //styling for the past slots
             if(slot < now) {
-                $("user-input").addClass("past");
-                $("user-input").removeClass("present");
-                $("user-input").removeClass("future");
+                $(this).addClass("past");
+                $(this).removeClass("present");
+                $(this).removeClass("future");
             }
             //styling for the future slots
             else if (slot > now) {
-                $("user-input").removeClass("past");
-                $("user-input").removeClass("present");
-                $("user-input").addClass("future");
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
             }
             //styling for present slots
             else {
-                $("user-input").removeClass("past");
-                $("user-input").addClass("present");
-                $("user-input").removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present");
+                $(this).removeClass("future");
             }
     })
 }
