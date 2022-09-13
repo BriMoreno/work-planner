@@ -1,14 +1,15 @@
 # work-planner
 Making a planner using moment.js
 
-User Story
-
+# User Story
+```
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
+```
 
-Acceptance Criteria
-
+# Acceptance Criteria
+```
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -22,3 +23,22 @@ WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+```
+
+## How it works
+![my gif](schedule.gif)
+
+## Help
+
+Any advise for improvement would be much appreciated.
+
+
+## Authors
+[BriMoreno](https://github.com/BriMoreno)
+
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+
